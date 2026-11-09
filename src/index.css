@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+:root {
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+}
+
+/* In standalone app mode, ensure smooth canvas feel and zero browser chrome interference */
+@media all and (display-mode: standalone) {
+  body {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+  }
+}
+
+/* Support iPhone Dynamic Island & Home indicator */
+#pwa-root {
+  padding-top: var(--safe-top);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 9999;
+}
+
+/* Disable pull-to-refresh on mobile */
+html, body {
+  overscroll-behavior-y: none;
+  touch-action: pan-x pan-y;
+}
+
+#view, #stage, #stage canvas {
+  touch-action: none !important;
+}

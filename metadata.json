@@ -1,0 +1,6 @@
+{
+  "name": "OMEONE 4.0 繪圖工作室",
+  "description": "OMEONE 4.0 專業級手繪筆刷、圖層、動畫與本機專案管理工作室，專為 iOS 與 Android 手機與平板打造的 App 模式體驗。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
